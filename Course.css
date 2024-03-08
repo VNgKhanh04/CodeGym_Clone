@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #e8ebf1;
+}
+.logo-sidebar{
+    display: inline-block;
+    width: 220px;
+    position: fixed;
+}
+.header{
+    width: 100%;
+    height: 71px;
+}
+.content{
+    margin-left: 220px;
+}
+.inner-content{
+    padding: 0 30px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.tabs-content{
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid black;
+}
+.tabs{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1px;
+}
+.tab-qm-ls{
+    position: relative;
+    margin-bottom: -1px;
+    vertical-align: bottom;
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #172b53;
+    padding: 14px 4px 16px;
+    line-height: 1;
+    outline: none;
+}
+.tab-qm-ls span{
+    overflow: hidden;
+}
+.tab-qm::before{
+    position: absolute;
+    content: "";
+    background-color: #43aaeb;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: -1.2px;
+}
+.tab-qm-ls span:hover{
+    color: #172b53;
+    cursor: pointer;
+}
+.main-content{
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.quest-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 28px;
+}
+.quest-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.quest-card a{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    background-color: inherit;
+    border-radius: inherit;
+    padding: 20px;
+    box-shadow: 0 -1px #b6bfcb inset, 0 0 0 1px #d5dae2 inset;
+}
+.quest-card-img{
+    margin:-20px -20px 18px;
+    background-color: inherit;
+    border-radius: inherit;
+}
+.quest-card-img img{
+    width: 100%;
+    height: 221px;
+    border-radius: 10px;
+}
+.quest-card-description{
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    flex-grow: 1;
+}
+.des-title{
+    text-align: center;
+    color: #151f33;
+    font-size: 18px;
+    line-height: 1.1;
+    margin-bottom: 13px;
+    background-color: inherit;
+}
+.des{
+    color: #172b53;
+    line-height: 1.746;
+    font-size: 13px;
+    background-color: inherit;
+}
+.btn-lock{
+    display: flex;
+    margin: 18px 0 0;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+}
+.btn-lock button{
+    background-color: inherit;
+    text-transform: uppercase;
+    color: #f34d47;
+    border: 1px solid #f34d47;
+    padding: 4px 9px 3px;
+    letter-spacing: .2px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.footer{
+    margin-left: 220px;
+    background-color: #172437;
+}
+.footer iframe{
+    width: 100%;
+    height: 619.3px;
+    background-color: #172437;
+}

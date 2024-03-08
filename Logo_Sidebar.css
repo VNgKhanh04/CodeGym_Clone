@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+.logo-sidebar{
+    display: block;
+    width: 220px;
+    height: 100vh;
+    text-align: left;
+    background-color: #293d57;
+    position: fixed;
+}
+.logo{
+    height: 71px;
+    background-color: #1b2b40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+.logo a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.logo img{
+    width: 147px;
+    height: 32px;
+}
+.sidebar{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-head{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.prom-uni:hover{
+    background-color: #2e4661;
+}
+.prom-uni{
+    border-top: 1px solid #3b597a;
+    display: flex;
+    justify-content: center;
+}
+.sidebar-head-link{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px 10px 25px;
+    line-height: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+}
+.sidebar-head-link .ic-prom-uni{
+    display: inline-block;
+    margin-right: 15px;
+}
+.btn-learn{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-left: 1px solid #3b597a;
+    padding: 0;
+    background-color: #293d57;
+    visibility: hidden;
+}
+.learn-collapse{
+    position: relative;
+}
+.learn-collapse:hover{
+    color: #fff;
+    background-color: #2e4661;
+    cursor: pointer;
+    border-bottom: 1px solid #3b597a;
+    margin-bottom: -1px;
+}
+.learn-collapse:hover .btn-learn{
+    visibility: visible;
+    background-color: #2e4661;
+    cursor: pointer;
+}
+.sidebar-learn-item{
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+.item{
+    min-height: 32px;
+    max-height: 46px;
+    display: flex;
+    align-items: center;
+}
+.item:hover{
+    background-color: #2e4661;
+    cursor: pointer;
+}
+.item:hover .item-link a{
+    color:  #fff;
+}
+.item-ic{
+    display: inline-block;
+    padding: 7px 15px 3px 25px;
+}
+.item-link{
+    text-align: left;
+    display: inline-block;
+}
+.item-link a{
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 14px;
+    color: #949eab;
+}
