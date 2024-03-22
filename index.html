@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Logo_Sidebar.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="Test.js"></script>
 </head>
 <body>
     <div class="logo-sidebar">
         <div class="logo">
-            <a href="Course.html">
+            <a href="">
                 <img src="images/logo-cg-full.svg" alt="">
             </a>
         </div>
@@ -41,42 +42,52 @@
                     </button>
                 </div>
                 <div class="sidebar-learn-item">
-                    <div class="item">
+                    <div class="item course_txt">
                         <div class="item-ic">
                             <img src="images/icons/rocket (1).png" alt="">
                         </div>
                         <div class="item-link">
-                            <a href="Course.html" target="_blank">Course</a>
+                            <a id="course_click" class="a_course" onclick="course_cl();">Course</a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item tasks_txt">
                         <div class="item-ic">
                             <img src="images/icons/to-do-list.png" alt="">
                         </div>
                         <div class="item-link">
-                            <a href="">Tasks</a>
+                            <a id="tasks_click" class="a_tasks" href="" onclick="task_cl();">Tasks</a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item sv_qz_txt" >
                         <div class="item-ic">
                             <img src="images/icons/interactive.png" alt="">
                         </div>
                         <div class="item-link">
-                            <a href="">Surveys & Quizzes</a>
+                            <a id="svqz_click" class="a_sv_qz" href="" onclick="svqz_cl();">Surveys & Quizzes</a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item game_txt">
                         <div class="item-ic">
                             <img src="images/icons/ps4.png" alt="">
                         </div>
                         <div class="item-link">
-                            <a href="">Games</a>
+                            <a id="games_click" class="a_game" href="" onclick="game_cl();">Games</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <iframe id="fr-Course" src="Course.html" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe id="fr-Tasks" src="Tasks.html" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe id="fr-SVQZ" src="SurveysQuizzes.html" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe id="fr-Games" src="Games.html" frameborder="0" width="100%" height="100%"></iframe>
 </body>
 </html>
+<!-- <script>
+    document.getElementById("course_click").addEventListener("click", function(event){
+        event.preventDefault();
+        var newPageUrl = this.getAttribute("href");
+        window.location.href = newPageUrl;
+    });
+</script> -->

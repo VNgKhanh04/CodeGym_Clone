@@ -100,6 +100,7 @@
     max-height: 46px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 .item:hover{
     background-color: #2e4661;
@@ -111,14 +112,24 @@
 .item-ic{
     display: inline-block;
     padding: 7px 15px 3px 25px;
+    position: absolute;
 }
 .item-link{
     text-align: left;
-    display: inline-block;
+    display: block;
+    width: 100%;
 }
 .item-link a{
+    display: block;
     text-decoration: none;
     line-height: 16px;
     font-size: 14px;
     color: #949eab;
+    padding: 8px 16px 8px 55px;
+}
+body{
+    overflow-y: hidden;
+}
+iframe{
+    display: none;
 }

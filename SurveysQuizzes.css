@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #e8ebf1;
+}
+.logo-sidebar{
+    display: inline-block;
+    width: 220px;
+    position: fixed;
+}
+.header{
+    width: 100%;
+    height: 71px;
+}
+.content{
+    margin-left: 220px;
+}
+.inner-content{
+    padding: 0 30px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.tabs-content{
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid black;
+}
+.tabs{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1px;
+}
+.tab-qm-ls{
+    position: relative;
+    margin-bottom: -1px;
+    vertical-align: bottom;
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #172b53;
+    padding: 14px 4px 16px;
+    line-height: 1;
+    outline: none;
+}
+.tab-qm-ls span{
+    overflow: hidden;
+}
+.tab-qm::before{
+    position: absolute;
+    content: "";
+    background-color: #43aaeb;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: -1.2px;
+}
+.tab-qm-ls span:hover{
+    color: #172b53;
+    cursor: pointer;
+}
+.main-content{
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tasks-filter{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+}
+.search-filter{
+    min-width: 340px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.search{
+    flex-basis: calc(100% - 35px);
+    max-width: calc(100% - 35px);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.inpSearch{
+    width: 100%;
+    border: 1px solid #d5d6e2;
+    padding: 5px 15px;
+    height: 36px;
+    min-height: 36px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    line-height: 24px;
+    color: #172b53;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+}
+.inpSearch:focus{
+    outline: none;
+}
+.btn-search{
+    min-width: 35px;
+    min-height: 36px;
+    padding: 7px 10px;
+    background-color: #939eaf;
+    border: 1px solid #939eaf;
+    margin-left: -1px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn-search img{
+    background-color: #939eaf;
+}
+.select-filter{
+    display: flex;
+    align-items: center;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+}
+.select span{
+    cursor: pointer;
+    font-size: 13px;
+    color: #172b53;
+    padding-right: 5px;
+}
+.tasks-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: -15px;
+}
+.tasks-list-item{
+    padding: 15px;
+    flex-basis: 340px;
+    max-width: 340px;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.tasks-card{
+    background-color: #fff;
+    box-shadow: 0 -1px #b6bfcb inset, 0 0 0 1px #d5dae2 inset;
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.3;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    width: 100%;
+}
+.tasks-card-contain{
+    min-height: 315px;
+    text-decoration: none;
+    padding: 21px 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+}
+.tasks-card-complexity{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 52px;
+}
+.tasks-card-complexity img{
+    height: inherit;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+}
+.tasks-card-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+}
+.avatar-khung{
+    margin-right: 10px;
+}
+.avatar{
+    border-radius: 50%;
+}
+.avatar img{
+    height: 70px;
+    border-radius: inherit;
+}
+.info{
+    width: 100%;
+}
+.info h2{
+    color: #172b53;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+.tasks-card-meta{
+    position: relative;
+    padding-right: 80px;
+}
+.tasks-card-meta span{
+    line-height: 1.1;
+    font-size: 12px;
+    font-weight: 400;
+    color: #7a869a;
+    display: block;
+}
+.star-list{
+    position: absolute;
+    top: -1px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.tasks-card-des{
+    flex-grow: 1;
+}
+.tasks-card-des div{
+    line-height: 1.4;
+    font-size: 12px;
+    font-weight: 400px;
+    color: #172b53;
+}
+.btn-lock{
+    display: flex;
+    margin: 18px 0 0;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+}
+.btn-lock button{
+    background-color: inherit;
+    text-transform: uppercase;
+    color: #f34d47;
+    border: 1px solid #f34d47;
+    padding: 4px 9px 3px;
+    letter-spacing: .2px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.content-footer{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn_SM{
+    margin-bottom: 20px;
+}
+.btn_SM button{
+    color: #657085;
+    border: 1px solid #657085;
+    cursor: pointer;
+    padding: 7px 20px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.btn_SM button:hover{
+    color: #fff;
+    background-color: #657085;
+    border-color: #657085;
+}
+.pagination-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+.pagination-list li{
+    margin: 7px;
+    display: inline-block;
+    cursor: pointer;
+}
+.pagination-list-item{
+    display: block;
+    color: #fff;
+    padding: 0 6px;
+    text-align: center;
+    min-width: 15px;    
+    height: 25px;
+    background-color: #adb6c4;
+    line-height: 26px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 2px;
+}
+.p1{
+    background-color: #657085;
+}
+.footer{
+    margin-left: 220px;
+    background-color: #172437;
+}
+.footer iframe{
+    width: 100%;
+    height: 619.3px;
+    background-color: #172437;
+}
