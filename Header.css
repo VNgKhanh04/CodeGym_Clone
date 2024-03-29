@@ -134,3 +134,15 @@
     background-color: #293d57;
     border-radius: 50%;
 } */
+.btn_login_su{
+    margin-left: 20px;
+    font-weight: 600;
+    background-color: #f34d47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    height: 38px;
+    cursor: pointer;
+}

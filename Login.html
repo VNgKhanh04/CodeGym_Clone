@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <iframe id="idHeader" class="header" src="Header.html" frameborder="0"></iframe> -->
+    <script src="Test.js"></script>
+    <link rel="stylesheet" href="Login.css">
+    <title>Codegym Login</title>
+</head>
+<body>
+    <div class="content">
+        <div class="inner-content">
+            <div class="tabs-content">
+                <ul class="tabs">
+                    <li class="tab-qm-ls">
+                        <span class="tab-qm" id="lg" onclick="lgCl()">
+                            Log in
+                        </span>
+                        <div class="sp-bf" id="bf-lg"></div>
+                    </li>
+                    <li class="tab-qm-ls">
+                        <span class="tab-su" id="su" onclick="suCl()">
+                            Sign Up
+                        </span>
+                        <div class="sp-bf-su" id="bf-su"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <form action="Tasks.html" id="lgForm">
+                    <div class="f_login">
+                        <h4>Login</h4>
+                        <input type="text"  id="email" placeholder="Enter your email">
+                        <input type="password" id="pass" placeholder="Enter your password">
+                        <a href="#">Forgot password?</a>
+                        <button>Login</button>
+                    </div>
+                </form>
+                <form id="suForm">
+                    <div class="f_login">
+                        <h4>Sign Up</h4>
+                        <input type="text"  id="name" placeholder="Enter your name">
+                        <input type="text"  id="email" placeholder="Enter your email">
+                        <input type="password" id="pass" placeholder="Enter your password">
+                        <button>Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <iframe src="Footer.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+</body>
+</html>

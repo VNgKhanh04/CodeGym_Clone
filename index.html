@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Header.css">
     <script src="Test.js"></script>
 </head>
 <body>
@@ -78,16 +79,40 @@
             </div>
         </div>
     </div>
+    <div class="header">
+        <div class="header-1">
+            <div class="inner-header">
+                <div class="title-search">
+                    <div class="title" id="title">
+                    </div>
+                    <div class="search">
+                        <div class="search-1">
+                            <div class="search-icon">
+                                <img src="images/icons/search.png" alt="">
+                            </div>
+                            <input type="text" placeholder="Search" class="inpSearch">
+                        </div>
+                    </div>
+                </div>
+                <div class="guest">
+                    <a href="#">reviews</a>
+                    <a href="#">about us</a>
+                </div>
+                <div class="btn_sl">
+                    <button class="button_sl">start learning</button>
+                </div>
+                <div class="day-night">
+                    <div class="btn_login">
+                        <button class="btn_login_su" onclick="btn_lg_su_CL()">Log in / Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <iframe id="fr-Course" src="Course.html" frameborder="0" width="100%" height="100%"></iframe>
     <iframe id="fr-Tasks" src="Tasks.html" frameborder="0" width="100%" height="100%"></iframe>
     <iframe id="fr-SVQZ" src="SurveysQuizzes.html" frameborder="0" width="100%" height="100%"></iframe>
     <iframe id="fr-Games" src="Games.html" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe id="fr-login" src="Login.html" frameborder="0" width="100%" height="100%"></iframe>
 </body>
 </html>
-<!-- <script>
-    document.getElementById("course_click").addEventListener("click", function(event){
-        event.preventDefault();
-        var newPageUrl = this.getAttribute("href");
-        window.location.href = newPageUrl;
-    });
-</script> -->

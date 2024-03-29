@@ -70,6 +70,7 @@ function course_cl(){
     document.getElementById('games_click').style.color = '#949eab';
     document.getElementById('games_click').style.fontWeight = '400';
     document.getElementById('games_click').style.pointerEvents = 'auto';
+    document.getElementById('title').innerHTML = "Java Course";
 }
 function task_cl(){
     Test1('fr-Tasks', 'tasks_click');
@@ -85,6 +86,7 @@ function task_cl(){
     document.getElementById('games_click').style.color = '#949eab';
     document.getElementById('games_click').style.fontWeight = '400';
     document.getElementById('games_click').style.pointerEvents = 'auto';
+    document.getElementById('title').innerHTML = "Tasks";
 }
 function svqz_cl(){
     Test1('fr-SVQZ', 'svqz_click');
@@ -100,6 +102,7 @@ function svqz_cl(){
     document.getElementById('games_click').style.color = '#949eab';
     document.getElementById('games_click').style.fontWeight = '400';
     document.getElementById('games_click').style.pointerEvents = 'auto';
+    document.getElementById('title').innerHTML = "Survey & Quizzes";
 }
 function game_cl(){
     Test1('fr-Games', 'games_click');
@@ -115,9 +118,35 @@ function game_cl(){
     document.getElementById('course_click').style.color = '#949eab';
     document.getElementById('course_click').style.fontWeight = '400';
     document.getElementById('course_click').style.pointerEvents = 'auto';
+    document.getElementById('title').innerHTML = "Games";
 }
 function fr(id){
     var windowHeight = window.innerHeight;
     var myDiv = document.getElementById(id);
     myDiv.style.height = windowHeight + 'px';
+}
+function btn_lg_su_CL(){
+    document.getElementById('fr-Course').style.display = 'none';
+    document.getElementById('fr-Tasks').style.display = 'none';
+    document.getElementById('fr-SVQZ').style.display = 'none';
+    document.getElementById('fr-Games').style.display = 'none';
+    document.getElementById("fr-login").style.display="block";
+    document.body.addEventListener('onload', fr("fr-login"));
+    document.getElementById('title').innerHTML = "Login/Sign Up";
+}
+function lgCl(){
+    document.getElementById('bf-su').style.visibility = 'hidden';
+    document.getElementById('bf-lg').style.visibility = 'visible';
+    document.getElementById("su").style.color = "#7a869a";
+    document.getElementById("lg").style.color = "#172b53";
+    document.getElementById("suForm").style.display = "none";
+   document.getElementById("lgForm").style.display = "block";
+ }
+function suCl(){
+   document.getElementById('bf-su').style.visibility = 'visible';
+   document.getElementById('bf-lg').style.visibility = 'hidden';
+   document.getElementById("su").style.color = "#172b53";
+   document.getElementById("lg").style.color = "#7a869a";
+   document.getElementById("suForm").style.display = "block";
+   document.getElementById("lgForm").style.display = "none";
 }
