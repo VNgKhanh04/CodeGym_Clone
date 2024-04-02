@@ -41,6 +41,51 @@ function headerTitle(idIframe, idItem, title){
         console.log("fail iframe");
     }
 }
+
+function checkLogin(){
+    var ifCourse = document.getElementById('fr-Course');
+    var course_doc = ifCourse.contentDocument;
+    var aTags_c = course_doc.getElementsByTagName('a');
+    var ifTask = document.getElementById('fr-Tasks');
+    var task_doc = ifTask.contentDocument;
+    var aTags_t = task_doc.getElementsByTagName('a');
+
+    var ifSVQZ = document.getElementById('fr-SVQZ');
+    var SVQZ_doc = ifSVQZ.contentDocument;
+    var aTags_s = SVQZ_doc.getElementsByTagName('a');
+    var ifGames = document.getElementById('fr-Games');
+    var games_doc = ifGames.contentDocument;
+    var aTags_g = games_doc.getElementsByTagName('a');
+    if(window.getComputedStyle(document.getElementById('p_email')).getPropertyValue('display') === 'none'){
+        for (var i = 0; i < aTags_c.length; i++) {
+            aTags_c[i].style.pointerEvents = 'none';
+        }
+        for (var i = 0; i < aTags_t.length; i++) {
+            aTags_t[i].style.pointerEvents = 'none';
+        }
+        for (var i = 0; i < aTags_s.length; i++) {
+            aTags_s[i].style.pointerEvents = 'none';
+        }
+        for (var i = 0; i < aTags_g.length; i++) {
+            aTags_g[i].style.pointerEvents = 'none';
+        }
+    }
+    else{
+        for (var i = 0; i < aTags_c.length; i++) {
+            aTags_c[i].style.pointerEvents = 'auto';
+        }
+        for (var i = 0; i < aTags_t.length; i++) {
+            aTags_t[i].style.pointerEvents = 'auto';
+        }
+        for (var i = 0; i < aTags_s.length; i++) {
+            aTags_s[i].style.pointerEvents = 'auto';
+        }
+        for (var i = 0; i < aTags_g.length; i++) {
+            aTags_g[i].style.pointerEvents = 'auto';
+        }
+    }
+}
+
 function Test1(id, ida){
     event.preventDefault();
     document.getElementById('fr-Course').style.display = 'none';
@@ -58,6 +103,7 @@ function Test1(id, ida){
 
 function course_cl(){
     Test1('fr-Course', 'course_click');
+    checkLogin();
     document.getElementById('tasks_click').style.backgroundColor = 'transparent';
     document.getElementById('tasks_click').style.color = '#949eab';
     document.getElementById('tasks_click').style.fontWeight = '400';
@@ -74,6 +120,7 @@ function course_cl(){
 }
 function task_cl(){
     Test1('fr-Tasks', 'tasks_click');
+    checkLogin();
     document.getElementById('course_click').style.backgroundColor = 'transparent';
     document.getElementById('course_click').style.color = '#949eab';
     document.getElementById('course_click').style.fontWeight = '400';
@@ -90,6 +137,7 @@ function task_cl(){
 }
 function svqz_cl(){
     Test1('fr-SVQZ', 'svqz_click');
+    checkLogin();
     document.getElementById('tasks_click').style.backgroundColor = 'transparent';
     document.getElementById('tasks_click').style.color = '#949eab';
     document.getElementById('tasks_click').style.fontWeight = '400';
@@ -106,6 +154,7 @@ function svqz_cl(){
 }
 function game_cl(){
     Test1('fr-Games', 'games_click');
+    checkLogin();
     document.getElementById('tasks_click').style.backgroundColor = 'transparent';
     document.getElementById('tasks_click').style.color = '#949eab';
     document.getElementById('tasks_click').style.fontWeight = '400';
@@ -149,4 +198,13 @@ function suCl(){
    document.getElementById("lg").style.color = "#7a869a";
    document.getElementById("suForm").style.display = "block";
    document.getElementById("lgForm").style.display = "none";
+}
+
+function Logout_CL(){
+    document.getElementById('p_email').style.display = 'none';
+    document.getElementById('btn_log_res').style.display = 'block';
+    document.getElementById('btn_lout').style.display = 'none';
+    document.getElementById('af_si').style.marginTop = 0;
+    alert("Logout  Successfully!");
+    checkLogin();
 }

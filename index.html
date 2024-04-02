@@ -101,9 +101,14 @@
                 <div class="btn_sl">
                     <button class="button_sl">start learning</button>
                 </div>
-                <div class="day-night">
+                <div class="day-night" id="af_si">
+                    <p id="p_email"></p>
                     <div class="btn_login">
-                        <button class="btn_login_su" onclick="btn_lg_su_CL()">Log in / Sign up</button>
+                        <button class="btn_login_su" onclick="btn_lg_su_CL()" id="btn_log_res">Log in / Sign up</button>
+                    </div>
+                    
+                    <div class="btn_logout">
+                        <button class="btn_login_su" id="btn_lout" onclick="Logout_CL()">Log Out</button>
                     </div>
                 </div>
             </div>
@@ -114,5 +119,61 @@
     <iframe id="fr-SVQZ" src="SurveysQuizzes.html" frameborder="0" width="100%" height="100%"></iframe>
     <iframe id="fr-Games" src="Games.html" frameborder="0" width="100%" height="100%"></iframe>
     <iframe id="fr-login" src="Login.html" frameborder="0" width="100%" height="100%"></iframe>
+
+
+    <script type="module">
+        var ifLogin = document.getElementById('fr-login');
+        var login_doc = ifLogin.contentDocument;
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBw971xhtQOR9Q6raWl5nZHEpT-23EJ_SQ",
+          authDomain: "codegymcl-cce48.firebaseapp.com",
+          databaseURL: "https://codegymcl-cce48-default-rtdb.firebaseio.com",
+          projectId: "codegymcl-cce48",
+          storageBucket: "codegymcl-cce48.appspot.com",
+          messagingSenderId: "970457100684",
+          appId: "1:970457100684:web:53e52013a4eb2f680ae6a9",
+          measurementId: "G-WQ613JX7C8"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        //Sign Up
+        const auth = getAuth(app);
+        const db = getDatabase();
+        const dbref = ref(db);
+        login_doc.getElementById('signup').addEventListener('click', function(e){
+            e.preventDefault();
+            var email = login_doc.getElementById('su_email').value;
+            var pass = login_doc.getElementById('su_pass').value;
+            createUserWithEmailAndPassword(auth, email, pass).then(function(){
+                alert('Sign up sucessful');
+            })
+        });
+        //Login
+        login_doc.getElementById('login').addEventListener('click', function(e){
+            e.preventDefault();
+            var email = login_doc.getElementById('lg_email').value;
+            var pass = login_doc.getElementById('lg_pass').value;
+            signInWithEmailAndPassword(auth, email, pass).then(function(){
+                alert('Login sucessful');
+                document.getElementById('btn_log_res').style.display = 'none';
+                document.getElementById('btn_lout').style.display = 'block';
+                document.getElementById('af_si').style.marginTop = '-14px';
+                document.getElementById('p_email').innerHTML = email;
+                document.getElementById('p_email').style.display = 'block';
+                course_cl();
+            })   
+        });
+    </script>
 </body>
 </html>

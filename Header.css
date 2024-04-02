@@ -105,6 +105,14 @@
 }
 .day-night{
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+.day-night p{
+    font-size: 12px;
+    color: #fff;
+    margin-left: 20px;
+    display: none;
 }
 .day-night-icon{
     width: 50px;
@@ -145,4 +153,8 @@
     letter-spacing: 1px;
     height: 38px;
     cursor: pointer;
+    width: 147px;
+}
+#btn_lout{
+    display: none;
 }
