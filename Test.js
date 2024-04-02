@@ -89,8 +89,10 @@ function checkLogin(){
 function Test1(id, ida){
     event.preventDefault();
     document.getElementById('fr-Course').style.display = 'none';
+    document.getElementById('fr-login').style.display = 'none';
     document.getElementById('fr-Tasks').style.display = 'none';
     document.getElementById('fr-SVQZ').style.display = 'none';
+    document.getElementById('fr-QZ').style.display = 'none';
     document.getElementById('fr-Games').style.display = 'none';
     var op = document.getElementById(id);
     op.style.display = 'block';
@@ -151,6 +153,12 @@ function svqz_cl(){
     document.getElementById('games_click').style.fontWeight = '400';
     document.getElementById('games_click').style.pointerEvents = 'auto';
     document.getElementById('title').innerHTML = "Survey & Quizzes";
+    var ifSVQZ = document.getElementById('fr-SVQZ');
+    var SVQZ_doc = ifSVQZ.contentDocument;
+    var link = SVQZ_doc.getElementById('link-svqz');
+    link.addEventListener('click', function(){
+        Test1('fr-QZ', 'svqz_click');
+    });
 }
 function game_cl(){
     Test1('fr-Games', 'games_click');
@@ -208,3 +216,5 @@ function Logout_CL(){
     alert("Logout  Successfully!");
     checkLogin();
 }
+
+
