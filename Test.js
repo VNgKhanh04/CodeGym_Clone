@@ -93,6 +93,7 @@ function Test1(id, ida){
     document.getElementById('fr-Tasks').style.display = 'none';
     document.getElementById('fr-SVQZ').style.display = 'none';
     document.getElementById('fr-QZ').style.display = 'none';
+    document.getElementById('fr-Code').style.display = 'none';
     document.getElementById('fr-Games').style.display = 'none';
     var op = document.getElementById(id);
     op.style.display = 'block';
@@ -105,6 +106,10 @@ function Test1(id, ida){
 
 function course_cl(){
     Test1('fr-Course', 'course_click');
+    var ifCourse = document.getElementById('fr-Course');
+    var course_doc = ifCourse.contentDocument;
+    course_doc.getElementById('quest-list').style.display = 'grid';
+    course_doc.getElementById('lesson').style.display = 'none';
     checkLogin();
     document.getElementById('tasks_click').style.backgroundColor = 'transparent';
     document.getElementById('tasks_click').style.color = '#949eab';
@@ -119,6 +124,23 @@ function course_cl(){
     document.getElementById('games_click').style.fontWeight = '400';
     document.getElementById('games_click').style.pointerEvents = 'auto';
     document.getElementById('title').innerHTML = "Java Course";
+    var qz = course_doc.getElementById('link-qz');
+    var code = course_doc.getElementById('link-code');
+    qz.addEventListener('click', function(){
+        Test1('fr-QZ', 'course_click');
+    });
+    code.addEventListener('click', function(){
+        Test1('fr-Code', 'course_click');
+    });
+    var ifCode = document.getElementById('fr-Code');
+    var code_doc = ifCode.contentDocument;
+    var sl =0;
+    code_doc.getElementById('checkSl').addEventListener('click', function (){
+        sl++;
+        if(sl==5){
+            Test1('fr-Course', 'course_click');
+        }
+    });
 }
 function task_cl(){
     Test1('fr-Tasks', 'tasks_click');
@@ -153,12 +175,6 @@ function svqz_cl(){
     document.getElementById('games_click').style.fontWeight = '400';
     document.getElementById('games_click').style.pointerEvents = 'auto';
     document.getElementById('title').innerHTML = "Survey & Quizzes";
-    var ifSVQZ = document.getElementById('fr-SVQZ');
-    var SVQZ_doc = ifSVQZ.contentDocument;
-    var link = SVQZ_doc.getElementById('link-svqz');
-    link.addEventListener('click', function(){
-        Test1('fr-QZ', 'svqz_click');
-    });
 }
 function game_cl(){
     Test1('fr-Games', 'games_click');
@@ -216,5 +232,3 @@ function Logout_CL(){
     alert("Logout  Successfully!");
     checkLogin();
 }
-
-

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Code.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="inner-content">
+            <div class="main-content">
+                <div class="title">
+                    <h2>Bạn hãy hiển thị ra "Name: Linh"</h2>
+                </div>
+                <div id="code-container">
+                    <div data-pym-src='https://www.jdoodle.com/plugin' data-language="java" data-version-index="4"
+                        data-libs="mavenlib1, mavenlib2">
+
+public class Solution {
+    public static void main(String[] args) {
+        hello hl = new hello();
+        hl.v();
+    }
+}
+class hello{
+    public void v(){
+        System.out.print("Hello");
+    }
+}
+                    </div>
+                </div>
+                <button onclick="checkOutput()" id="checkSl">Kiểm tra Output</button>
+                <!-- Thêm phần tử span để lưu trữ kết quả thực tế -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+    <script>
+        function checkOutput() {
+            
+        }
+    </script>
+<div class="footer">
+    <iframe src="Footer.html" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+</body>
+
+</html>

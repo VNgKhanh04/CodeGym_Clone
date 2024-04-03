@@ -51,18 +51,31 @@
 .tab-qm-ls span{
     overflow: hidden;
 }
-.tab-qm::before{
+.bf-qm{
     position: absolute;
     content: "";
     background-color: #43aaeb;
     height: 4px;
     left: 0;
     right: 0;
-    bottom: -1.2px;
+    bottom: -1px;
+}
+.bf-ls{
+    position: absolute;
+    content: "";
+    background-color: #43aaeb;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    visibility: hidden;
 }
 .tab-qm-ls span:hover{
     color: #172b53;
     cursor: pointer;
+}
+.tab-ls{
+    color: #7a869a;
 }
 .main-content{
     width: 100%;
@@ -148,4 +161,71 @@
     width: 100%;
     height: 619.3px;
     background-color: #172437;
+}
+.lesson{
+    display: none;
+}
+.ls-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+hr{
+    margin-bottom: 30px;
+}
+.ls-header-ava{
+    margin-right: 25px;
+}
+.ls-header-ava img{
+    border-radius: 50%;
+    height: 110px;
+}
+.ls-header-title{
+    display: flex;
+    flex-direction: column;
+}
+.ls-header-title h1{
+    color: #151f33;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.ls-header-meta{
+    margin-bottom: 15px;
+}
+.ls-header-meta p{
+    font-size: 12px;
+    color: #7a869a;
+}
+.status{
+    padding: 3px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #40ab47;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+}
+.lesson p{
+    font-size: 18px;
+    color: #151f33;
+    margin-bottom: 18px;
+}
+.btn-qz-code{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-qz-code button{
+    padding: 10px 60px;
+    border: 1px solid #4180ab;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #4180ab;
+    cursor: pointer;
+}
+.btn-qz-code button:hover{
+    color: #fff;
+    border-color: #336f9d;
+    background-color: #336f9d;
 }

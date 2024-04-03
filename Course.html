@@ -7,6 +7,7 @@
     <!-- <iframe id="ifrLogo-sidebar" class="logo-sidebar" src="Logo_Sidebar.html" frameborder="0" height="100%"></iframe> -->
     <!-- <iframe id="idHeader" class="header" src="Header.html" frameborder="0"></iframe> -->
     <script src="Test.js"></script>
+    <!-- <script src="Course.js"></script> -->
     <title>Java Course - Quest Map</title>
 </head>
 <body>
@@ -15,22 +16,24 @@
             <div class="tabs-content">
                 <ul class="tabs">
                     <li class="tab-qm-ls">
-                        <span class="tab-qm">
+                        <span class="tab-qm" id="qm-cl">
                             Quest map
                         </span>
+                        <div class="bf-qm"></div>
                     </li>
-                    <!-- <li class="tab-qm-ls">
+                    <li class="tab-qm-ls">
                         <span class="tab-ls">
                             Lessons
                         </span>
-                    </li> -->
+                        <div class="bf-ls"></div>
+                    </li>
                 </ul>
             </div>
             <div class="main-content">
                 <div>
-                    <div class="quest-list">
+                    <div class="quest-list" id="quest-list">
                         <div class="quest-card">
-                            <a href="" class="a_c">
+                            <a href="" class="a_c" id="quest1">
                                 <div class="quest-card-img">
                                     <img src="images/quest-img/1024.jpeg" alt="">
                                 </div>
@@ -138,6 +141,46 @@
                             </a>
                         </div>
                     </div>
+                    <div class="lesson" id="lesson">
+                        <div class="ls-header">
+                            <div class="ls-header-ava">
+                                <img src="images/avatars/diego.png" alt="">
+                            </div>
+                            <div class="ls-header-title">
+                                <h1>Địa chỉ bộ nhớ và các biến</h1>
+                                <div class="ls-header-meta">
+                                    <p>Cú pháp Java</p>
+                                    <p>Level 1, Lesson 3</p>
+                                </div>
+                                <div class="ls-header-extra">
+                                    <div class="status">avaiable</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p>"Chào, Amigo."</p>
+                        <p>"Xin chào, Eleanor Carrey."</p>
+                        <p>"Cứ gọi tôi là Ellie. Không cần quá trang trọng."</p>
+                        <p>"Được rồi, Ellie."</p>
+                        <p>"Tôi tin rằng với sự giúp đỡ của tôi, bạn sẽ sớm trở thành một trong những người giỏi nhất. Tôi có nhiều kinh nghiệm huấn luyện tân binh. Hãy ở bên tôi, rồi mọi chuyện sẽ ổn thôi. Nào, bắt đầu thôi."</p>
+                        <p>"Có hai loại chính trong Java : Chuỗi và int . Chúng tôi lưu trữ chuỗi/văn bản trong Chuỗi và số nguyên (số nguyên) trong int. Để khai báo một biến mới, bạn cần chỉ định loại và tên của nó. Tên không thể là tên giống như tên của bất kỳ biến và/hoặc hàm nào khác."</p>
+                        <p>"Bạn có thể gán giá trị cho các biến khi bạn khai báo chúng."</p>
+                        <p>"Để gán một giá trị mới cho một biến, chúng ta sử dụng dấu =. Nó còn được gọi là 'toán tử gán' . Phép gán có nghĩa là đặt vào một biến một giá trị từ một biến khác hoặc một giá trị được tính từ nhiều biến. "</p>
+                        <p>"Giá trị của một biến có thể được sử dụng để tính toán một giá trị mới sẽ thay thế giá trị cũ."</p>
+                        <p>"Bạn có thể hợp nhất các chuỗi với +dấu hiệu"</p>
+                        <p>"Đôi khi, các chuỗi bao gồm một hoặc nhiều khoảng trắng có thể hữu ích"</p>
+                        <p>Amigo suy nghĩ một phút:</p>
+                        <p>"Tôi thấy nó không hào phóng cho lắm. Tôi nhớ một câu mà Diego đã dạy tôi..."</p>
+                        <p>Rishi đã trở lại.</p>
+                        <p>"Chà, bạn thế nào rồi?"</p>
+                        <p>"Sẵn sàng rồi. Tôi đã ký rồi."</p>
+                        <p>"Tuyệt vời! Tôi cũng sẽ ký mà không cần nhìn. Ở đây trên Galactic Rush, chúng ta không bao giờ lừa dối nhau."</p>
+                        <p>"Ha-ha. Cảm ơn bạn Rishi của tôi, vì sự hào phóng của bạn! "</p>
+                        <div class="btn-qz-code">
+                            <button id="link-qz">Quizzes</button>
+                            <button id="link-code">Code</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,3 +190,14 @@
     </div>
 </body>
 </html>
+<script>
+document.getElementById('quest1').addEventListener('click',function(e){
+    e.preventDefault();
+    document.getElementById('quest-list').style.display = 'none';
+    document.getElementById('lesson').style.display = 'block';
+});
+document.getElementById('qm-cl').addEventListener('click', function(){
+    document.getElementById('quest-list').style.display = 'grid';
+    document.getElementById('lesson').style.display = 'none';
+});
+</script>
